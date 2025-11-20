@@ -14,11 +14,19 @@ export class Descarte {
   @Prop()
   tipoLocal: string;
 
-  @Prop()
+  @Prop({ type: [String] })
   categoriaResiduo: string;
 
-  @Prop()
-  geolocalização: string;
+  @Prop({
+    type: {
+      lat: Number,
+      lng: Number,
+    },
+  })
+  geolocalizacao: {
+    lat: number;
+    lng: number;
+  };
 }
 
 export const DescarteSchema = SchemaFactory.createForClass(Descarte);

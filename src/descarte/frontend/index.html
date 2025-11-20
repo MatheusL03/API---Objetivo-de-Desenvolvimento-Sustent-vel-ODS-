@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Ponto de Descarte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/main.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Ponto de Descarte</h1>
+
+<form id="formPonto">
+    <label>Nome do Local</label>
+    <input type="text" id="nomeLocal" required>
+
+    <label>Bairro</label>
+    <input type="text" id="bairro" required>
+
+    <label>Tipo de Local</label>
+    <select id="tipo">
+        <option value="publico">Público</option>
+        <option value="privado">Privado</option>
+    </select>
+
+    <label>Categorias de resíduos aceitos:</label>
+    <div class="checkbox-group">
+        <label><input type="checkbox" name="categoria" value="Plástico"> Plástico</label>
+        <label><input type="checkbox" name="categoria" value="Vidro"> Vidro</label>
+        <label><input type="checkbox" name="categoria" value="Metal" id="metal"> Metal</label>
+        <label><input type="checkbox" name="categoria" value="Papel"> Papel</label>
+        <label><input type="checkbox" name="categoria" value="Orgânico" id="organico"> Orgânico</label>
+    </div>
+
+    <label>Latitude</label>
+    <input type="number" id="latitude" step="0.000001" required>
+
+    <label>Longitude</label>
+    <input type="number" id="longitude" step="0.000001" required>
+
+    <button type="submit">Cadastrar Ponto</button>
+</form>
+
+<div id="listaPontos" class="cards-container"></div>
+
+</body>
+</html>
